@@ -7,7 +7,13 @@ This is a repository of my Data Science Projects where I have to the best of my 
 
 ### Project Index
 1. Predict Customer Churn from Telco Customer Dataset
-- Esplore Data
+- Explore Data
 - Clean Data
 - Split into Train and Test Groups
 - Apply Machine Learning Classification Models
+
+2. Housing Price Prediction
+- Data Wrangling
+- Exploratory Data Analysis
+- Correlation Matrix
+- Regression

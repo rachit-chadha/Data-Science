@@ -1,0 +1,225 @@
+/* Index Page CSS */
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+#map {
+  position: absolute;
+  top: 15em;
+  bottom: 1em;
+  top: 19em;
+  left: 10em;
+  right: 10em;
+}
+.tableauPlaceholder {
+  top: 2em;
+  left: 5em;
+  align-content: center;
+}
+header .PG {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: rgb(147, 204, 195);
+  font-family: verdana;
+  font-size: 40px;
+  top: 1.5em;
+}
+.headerBackground {
+  padding: 5px 0;
+  background-color: rgb(70, 70, 70);
+  height: 12em;
+  width: 100%;
+}
+menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: rgba(247, 233, 207, 0);
+  z-index: 2;
+}
+list {
+  float: left;
+}
+list a {
+  display: block;
+  width: auto;
+  text-align: center;
+  padding: 14px 16px;
+  color: white;
+  border-bottom: 3px solid rgb(197, 197, 197);
+  text-decoration: none;
+  font-family: verdana;
+}
+list a:hover {
+  border-bottom: 3px solid gray;
+  color: rgb(184, 184, 184);
+}
+list a.active {
+  background-color: rgb(147, 204, 195);
+  border-bottom: white;
+  color: black;
+}
+.indexBio {
+  margin: 25em 14em 14em;
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: verdana;
+  font-size: 20px;
+}
+
+/* Documentation Page CSS */
+.documentationBio {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: verdana;
+  font-size: 18px;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+.documentationHeader {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: verdana;
+  font-size: 20px;
+  padding-top: 5em;
+}
+.docHeader {
+  font-family: verdana;
+  text-align: center;
+  padding-top: 2em;
+}
+.docIMG {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heading {
+  text-align: center;
+}
+
+/* About Page CSS */
+#row {
+  padding-top: 50px;
+}
+.aboutBio {
+  margin: 2em 14em 14em;
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: verdana;
+  font-size: 20px;
+}
+.column-left {
+  box-shadow: 0 4px 8px 0 rgb(84, 167, 154);
+  font-family: verdana;
+  margin-top: 2em;
+  margin-left: 3em;
+  top: 20em;
+  float: left;
+  width: 45%;
+  height: 22em;
+  padding: 2em;
+}
+.column-left:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column-right {
+  box-shadow: 0 4px 8px 0 rgb(84, 167, 154);
+  font-family: verdana;
+  margin-top: 2em;
+  margin-right: 3em;
+  float: right;
+  align-content: center;
+  width: 45%;
+  height: 22em;
+  border-left: 3px black;
+  padding: 2em;
+}
+.column-center:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column-bottom {
+  box-shadow: 0 4px 8px 0 rgb(84, 167, 154);
+  font-family: verdana;
+  margin-top: 27em;
+  margin-right: 25em;
+  margin-left: 11em;
+  align-content: center;
+  width: 70%;
+  height: 20em;
+  border-left: 2px black;
+  padding: 2em;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+img {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.column {
+  float: left;
+  margin-left: 38em;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+  padding: 0 20px;
+}
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.title {
+  color: grey;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.button:hover {
+  background-color: #555;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Map
+    </title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <link
+      href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+  </head>
+
+  <menu>
+    <ul class="main_menu">
+      <list><a href="index.html">Home</a></list>
+      <list><a href="map.html" class="active">Map</a></list>
+      <list><a href="about.html">About</a></list>
+      <list><a href="documentation.html">Documentation</a></list>
+    </ul>
+  </menu>
+
+  <header class="headerBackground">
+    <h1 class="PG">Map</h1>
+  </header>
+
+  <body onload="loadData()">
+    <div id="map">
+      <script>
+        function loadData() {
+          console.log("fetch"); // confirm code is running on load
+          fetch("/api")
+            .then(res => res.json())
+            .then(res => {
+              console.log(res); // logging step to check what we got
+              return res;
+            })
+            .then(res => {
+              //This code was done using a stackoverflow post on using GeoSearch for addresses in Leaflet by user Alechan
+              const provider = new window.GeoSearch.OpenStreetMapProvider();
+              for (let i = 0; i < res.data.length; i += 1) {
+                var query_promise = provider.search({
+                  query: res.data[i].address
+                });
+                query_promise.then(
+                  value => {
+                    for (v = 0; v < value.length; v++) {
+                      // Success!
+                      var x_coor = value[v].x;
+                      var y_coor = value[v].y;
+                      var label = value[v].label;
+                      // Create a marker for the found coordinates
+                      var marker = L.marker([y_coor, x_coor]).addTo(map); // CAREFULL!!! The first position corresponds to the lat (y) and the second to the lon (x)
+                      // Add a popup to said marker with the address found by geosearch (not the one from the user)
+                      marker
+                        .bindPopup("<b>Found location</b><br>" + label)
+                        .autoPan	= False
+                        .openPopup();
+                    }
+                  },
+                  reason => {
+                    console.log(reason); // Error!
+                  }
+                );
+              }
+              console.log(res);
+            });
+        }
+        var map = L.map("map").setView([38.8451, -76.875], 10);
+
+        L.tileLayer(
+          "https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=smaBuGfoiQznALG9gMRq",
+          {
+            attribution:
+              '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+          }
+        ).addTo(map);
+      </script>
+    </div>
+  </body>
+</html>

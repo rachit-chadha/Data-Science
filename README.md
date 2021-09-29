@@ -17,3 +17,11 @@ This is a repository of my Data Science Projects where I have to the best of my 
 - Exploratory Data Analysis
 - Correlation Matrix
 - Regression
+
+3. Housing Violations Data Visualization WebApp
+- Scrape Data Using Fetch API 
+- Data Cleaning and Transforming
+- Interactive Dashboard with Tableau
+- Tableau API to load Dashboard on Web Page
+- NodeJS
+- HTML & CSS

@@ -25,3 +25,8 @@ This is a repository of my Data Science Projects where I have to the best of my 
 - Tableau API to load Dashboard on Web Page
 - NodeJS
 - HTML & CSS
+
+4. Webscrape Job Openings
+- Python Script to webscrape Data Science job openings 
+- BeautifulSoup webscraping library Python
+- Data dump to CSV file for Jop Applications

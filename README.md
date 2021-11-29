@@ -30,3 +30,12 @@ This is a repository of my Data Science Projects where I have to the best of my 
 - Python Script to webscrape Data Science job openings 
 - BeautifulSoup webscraping library Python
 - Data dump to CSV file for Jop Applications
+
+5. Marketing Data Analytics
+- Analyze user data for E-learning Platform
+- Exploratory Data Analysis
+- Data Visualization
+- Insights for User Engagement and Tracking KPI's
+- Python using Numpy, Pandas, Plotly, Seaborn libraries
+- Analyze Churn rate, bounce rate, page exists, searches and site visits
+- Presentation on Insights and Reccomendations to markeing team

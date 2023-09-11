@@ -39,3 +39,9 @@ This is a repository of my Data Science Projects where I have to the best of my 
 - Python using Numpy, Pandas, Plotly, Seaborn libraries
 - Analyze Churn rate, bounce rate, page exists, searches and site visits
 - Presentation on Insights and Reccomendations to markeing team
+
+6. Sign-Language Detection using Computer Vision (ASL)
+- ASL Detection by OpenCV
+- Google Teachable Machine Tensor Flow Keras
+- Object Detection, image recognition and aspect ratio adjustment
+- Images taken through webcam and trained via keras.
